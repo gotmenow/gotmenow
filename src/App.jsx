@@ -6,7 +6,18 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
-// Add page imports here
+import Home from './pages/Home';
+import BusinessConsulting from './pages/BusinessConsulting';
+import StartupConsulting from './pages/StartupConsulting';
+import PassiveIncome from './pages/PassiveIncome';
+import About from './pages/About';
+import BookConsultation from './pages/BookConsultation';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Disclaimer from './pages/Disclaimer';
+import SiteLayout from '@/components/layout/SiteLayout';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -34,7 +45,19 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
+      <Route element={<SiteLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/business-consulting" element={<BusinessConsulting />} />
+        <Route path="/startup-consulting" element={<StartupConsulting />} />
+        <Route path="/passive-income" element={<PassiveIncome />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/book" element={<BookConsultation />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
