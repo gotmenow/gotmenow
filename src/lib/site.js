@@ -10,7 +10,6 @@ export const NAV_LINKS = [
   { label: "Startup Consulting", path: "/startup-consulting" },
   { label: "Passive Income", path: "/passive-income" },
   { label: "About", path: "/about" },
-  { label: "FAQ", path: "/faq" },
   { label: "Contact", path: "/contact" },
 ];
 

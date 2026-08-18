@@ -4,13 +4,14 @@ import SEO from "@/components/SEO";
 import SectionHeader from "@/components/SectionHeader";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import CTASection from "@/components/CTASection";
+import ServiceSlider from "@/components/ServiceSlider";
 import { SERVICES, TRUST_POINTS, TESTIMONIALS, WHATSAPP_LINK, INSTAGRAM_LINK, INSTAGRAM_HANDLE } from "@/lib/site";
 import { WhatsAppIcon, InstagramIcon } from "@/components/icons/Icons";
 import { useEffect, useRef, useState } from "react";
 
 const ICONS = { Briefcase, Rocket, TrendingUp };
 
-const HERO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/d54430e00_generated_af55cefd.png";
+const HERO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/05b099f4f_watermark-removed-Gemini_Generated_Image_2.png";
 
 function TrustCounter({ value, label, delay }) {
   const ref = useRef(null);
@@ -40,9 +41,7 @@ export default function Home() {
         <div className="container-tight grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#3d97e8] mb-6">Strategy Over Noise</div>
-            <h1 className="font-display text-[40px] sm:text-7xl lg:text-[84px] leading-[1.02] text-[#0A2540]">
-              Straight-talk consulting for people <span className="italic text-[#3d97e8]">building</span> a business, a startup, or a second income.
-            </h1>
+            <ServiceSlider />
             <p className="mt-7 text-lg text-[#475569] leading-relaxed max-w-xl">
               No hype. No guarantees. Just clear strategy from someone who built an audience and a brand — and now helps ambitious professionals build the same.
             </p>
@@ -52,9 +51,12 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] overflow-hidden bg-[#0A2540]">
-              <img src={HERO_IMG} alt="Nithin, founder of GotMeNow" className="w-full h-full object-cover" />
-            </div>
+            <img
+              src={HERO_IMG}
+              alt="Nithin, founder of GotMeNow"
+              className="w-full h-auto select-none"
+              style={{ WebkitMaskImage: "radial-gradient(118% 122% at 60% 38%, #000 50%, transparent 74%)", maskImage: "radial-gradient(118% 122% at 60% 38%, #000 50%, transparent 74%)" }}
+            />
             <div className="hidden lg:block absolute -bottom-6 -left-6 bg-[#F8FAFC] border border-foreground/10 px-6 py-4">
               <div className="text-xs text-[#475569] uppercase tracking-widest">Founder</div>
               <div className="font-display text-2xl text-[#0A2540]">Nithin</div>
