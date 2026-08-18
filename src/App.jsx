@@ -8,6 +8,7 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import BusinessConsulting from './pages/BusinessConsulting';
+import ServiceOffering from './pages/ServiceOffering';
 import StartupConsulting from './pages/StartupConsulting';
 import PassiveIncome from './pages/PassiveIncome';
 import About from './pages/About';
@@ -48,6 +49,7 @@ const AuthenticatedApp = () => {
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/business-consulting" element={<BusinessConsulting />} />
+        <Route path="/business-consulting/:offering" element={<ServiceOffering />} />
         <Route path="/startup-consulting" element={<StartupConsulting />} />
         <Route path="/passive-income" element={<PassiveIncome />} />
         <Route path="/about" element={<About />} />

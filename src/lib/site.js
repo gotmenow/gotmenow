@@ -6,10 +6,25 @@ export const EMAIL = "nithin@gotmenow.com";
 
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
-  { label: "Business Consulting", path: "/business-consulting" },
-  { label: "Startup Consulting", path: "/startup-consulting" },
-  { label: "Passive Income", path: "/passive-income" },
-  { label: "About", path: "/about" },
+  { label: "About Us", path: "/about" },
+  {
+    label: "What We Do",
+    path: "/business-consulting",
+    children: [
+      {
+        label: "Business Consulting",
+        path: "/business-consulting",
+        children: [
+          { label: "AI Orchestration", path: "/business-consulting/ai-orchestration" },
+          { label: "Digital Marketing", path: "/business-consulting/digital-marketing" },
+          { label: "SEO", path: "/business-consulting/seo" },
+          { label: "Web & Mobile App Development", path: "/business-consulting/web-mobile-apps" },
+        ],
+      },
+      { label: "Startup Consulting", path: "/startup-consulting" },
+      { label: "Passive Income Consulting", path: "/passive-income" },
+    ],
+  },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -28,10 +43,54 @@ export const SERVICES = [
       "Team structure and accountability systems",
     ],
     offerings: [
-      { title: "AI Orchestration", desc: "Designing AI workflows, automation stacks, and intelligent systems that compound your team's output.", icon: "Cpu" },
-      { title: "Digital Marketing", desc: "Channel strategy, funnel architecture, and brand positioning that turns attention into pipeline.", icon: "Megaphone" },
-      { title: "SEO", desc: "Technical and content-led search strategy built for durable, compounding organic visibility.", icon: "Search" },
-      { title: "Web / Mobile App Development", desc: "Product architecture and build oversight for web and mobile apps — from scope to shipped.", icon: "Code" },
+      {
+        slug: "ai-orchestration",
+        title: "AI Orchestration",
+        tagline: "Intelligent systems that compound your team's output.",
+        desc: "Designing AI workflows, automation stacks, and intelligent systems that compound your team's output.",
+        icon: "Cpu",
+        approach: [
+          "Map the repeatable workflows where AI can remove manual load without lowering quality.",
+          "Design a controlled stack — models, tools, and human checkpoints — not a patchwork of tools.",
+          "Build measurement around output, cost, and risk so the system improves instead of drifting.",
+        ],
+      },
+      {
+        slug: "digital-marketing",
+        title: "Digital Marketing",
+        tagline: "Attention, turned into pipeline.",
+        desc: "Channel strategy, funnel architecture, and brand positioning that turns attention into pipeline.",
+        icon: "Megaphone",
+        approach: [
+          "Position the offer before chasing channels — clarity beats reach every time.",
+          "Architect a funnel that matches how your audience actually decides.",
+          "Set up measurement tied to revenue, not vanity metrics.",
+        ],
+      },
+      {
+        slug: "seo",
+        title: "SEO",
+        tagline: "Durable, compounding organic visibility.",
+        desc: "Technical and content-led search strategy built for durable, compounding organic visibility.",
+        icon: "Search",
+        approach: [
+          "Fix the technical foundation so search engines can actually read the site.",
+          "Build a content map around real demand, not assumed keywords.",
+          "Create a cadence that compounds instead of one-off campaigns.",
+        ],
+      },
+      {
+        slug: "web-mobile-apps",
+        title: "Web & Mobile App Development",
+        tagline: "From scope to shipped — build oversight that holds.",
+        desc: "Product architecture and build oversight for web and mobile apps — from scope to shipped.",
+        icon: "Code",
+        approach: [
+          "Define scope and architecture before a line of code — scope creep starts in planning.",
+          "Oversee the build with clear milestones, reviews, and acceptance criteria.",
+          "Ship with the operational basics — analytics, errors, and maintenance — in place.",
+        ],
+      },
     ],
     forWhom: [
       "Owners of running businesses plateauing below their potential",
