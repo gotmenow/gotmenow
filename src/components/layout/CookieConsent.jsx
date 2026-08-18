@@ -23,11 +23,11 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed bottom-20 lg:bottom-6 inset-x-4 sm:inset-x-auto sm:right-6 z-50 max-w-md">
-      <div className="bg-[#0F172A] text-[#F8FAFC] p-5 shadow-2xl rounded-sm border border-white/10">
+      <div className="bg-[#0A2540] text-[#F8FAFC] p-5 shadow-2xl rounded-sm border border-white/10">
         <div className="flex items-start justify-between gap-3">
           <p className="text-sm leading-relaxed text-[#F8FAFC]/80">
             We use cookies to understand how the site is used. See our{" "}
-            <Link to="/privacy" className="underline text-[#C2410C]">Privacy Policy</Link>.
+            <Link to="/privacy" className="underline text-[#3d97e8]">Privacy Policy</Link>.
           </p>
           <button onClick={accept} aria-label="Dismiss" className="text-[#F8FAFC]/50 hover:text-white"><X className="w-4 h-4" /></button>
         </div>

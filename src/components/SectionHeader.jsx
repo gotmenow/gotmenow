@@ -18,11 +18,11 @@ export default function SectionHeader({ number, eyebrow, title, intro, align = "
         </span>
       )}
       {eyebrow && (
-        <div className={`text-xs font-semibold tracking-[0.2em] uppercase text-[#C2410C] mb-4 ${align === "center" ? "flex items-center justify-center gap-2" : ""}`}>
+        <div className={`text-xs font-semibold tracking-[0.2em] uppercase text-[#3d97e8] mb-4 ${align === "center" ? "flex items-center justify-center gap-2" : ""}`}>
           {eyebrow}
         </div>
       )}
-      <h2 className={`font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] ${dark ? "text-[#F8FAFC]" : "text-[#0F172A]"}`}>
+      <h2 className={`font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] ${dark ? "text-[#F8FAFC]" : "text-[#0A2540]"}`}>
         {title}
       </h2>
       {intro && <p className={`mt-6 text-lg leading-relaxed ${dark ? "text-[#F8FAFC]/70" : "text-[#475569]"}`}>{intro}</p>}

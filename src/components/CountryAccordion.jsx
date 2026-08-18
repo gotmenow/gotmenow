@@ -13,7 +13,7 @@ export default function CountryAccordion() {
           <div key={c.code} className="border-b border-foreground/10">
             <button
               onClick={() => setOpen(isOpen ? -1 : i)}
-              className={`w-full flex items-center justify-between gap-4 py-6 text-left transition-colors ${isOpen ? "text-[#C2410C]" : "text-[#0F172A]"} hover:text-[#C2410C]`}
+              className={`w-full flex items-center justify-between gap-4 py-6 text-left transition-colors ${isOpen ? "text-[#3d97e8]" : "text-[#0A2540]"} hover:text-[#3d97e8]`}
             >
               <div className="flex items-center gap-5">
                 <span className="text-2xl">{c.flag}</span>

@@ -12,8 +12,8 @@ export default function FAQ() {
 
       <section className="pt-32 sm:pt-40 pb-20">
         <div className="container-tight max-w-3xl">
-          <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#C2410C] mb-6">FAQ</div>
-          <h1 className="font-display text-5xl sm:text-6xl leading-[1.02] text-[#0F172A]">Straight answers.</h1>
+          <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#3d97e8] mb-6">FAQ</div>
+          <h1 className="font-display text-5xl sm:text-6xl leading-[1.02] text-[#0A2540]">Straight answers.</h1>
           <p className="mt-5 text-lg text-[#475569] leading-relaxed max-w-xl">If your question isn't here, the free fit-assessment call is the fastest way to get it answered.</p>
         </div>
       </section>
@@ -26,8 +26,8 @@ export default function FAQ() {
               return (
                 <div key={i} className="border-b border-foreground/10">
                   <button onClick={() => setOpen(isOpen ? -1 : i)} className="w-full flex items-center justify-between gap-6 py-6 text-left">
-                    <span className={`font-display text-xl sm:text-2xl ${isOpen ? "text-[#C2410C]" : "text-[#0F172A]"}`}>{f.q}</span>
-                    {isOpen ? <Minus className="w-5 h-5 flex-shrink-0 text-[#C2410C]" /> : <Plus className="w-5 h-5 flex-shrink-0 text-[#475569]" />}
+                    <span className={`font-display text-xl sm:text-2xl ${isOpen ? "text-[#3d97e8]" : "text-[#0A2540]"}`}>{f.q}</span>
+                    {isOpen ? <Minus className="w-5 h-5 flex-shrink-0 text-[#3d97e8]" /> : <Plus className="w-5 h-5 flex-shrink-0 text-[#475569]" />}
                   </button>
                   <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"}`}>
                     <div className="overflow-hidden">

@@ -28,6 +28,12 @@ export const SERVICES = [
       "Growth planning and revenue architecture",
       "Team structure and accountability systems",
     ],
+    offerings: [
+      { title: "AI Orchestration", desc: "Designing AI workflows, automation stacks, and intelligent systems that compound your team's output.", icon: "Cpu" },
+      { title: "Digital Marketing", desc: "Channel strategy, funnel architecture, and brand positioning that turns attention into pipeline.", icon: "Megaphone" },
+      { title: "SEO", desc: "Technical and content-led search strategy built for durable, compounding organic visibility.", icon: "Search" },
+      { title: "Web / Mobile App Development", desc: "Product architecture and build oversight for web and mobile apps — from scope to shipped.", icon: "Code" },
+    ],
     forWhom: [
       "Owners of running businesses plateauing below their potential",
       "Operators who need an outside perspective from someone who has built an audience and brand",
