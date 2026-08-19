@@ -7,7 +7,7 @@ export default function Logo({ className = "", height = 44 }) {
       <svg width="0" height="0" aria-hidden="true" style={{ position: "absolute" }}>
         <defs>
           <filter id={FILTER_ID}>
-            <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 1 1 0 -0.12" />
+            <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1 1 1 0 -0.12" />
             <feComponentTransfer>
               <feFuncA type="table" tableValues="0 1 1 1 1" />
             </feComponentTransfer>
