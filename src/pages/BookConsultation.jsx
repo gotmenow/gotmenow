@@ -36,10 +36,10 @@ export default function BookConsultation() {
         <SEO title="Book a Consultation — GotMeNow" description="Book a free fit-assessment consultation call with GotMeNow." />
         <section className="pt-40 pb-32 min-h-[70vh] flex items-center">
           <div className="container-tight max-w-xl text-center">
-            <div className="w-16 h-16 mx-auto rounded-full bg-[#3d97e8] flex items-center justify-center mb-8">
+            <div className="w-16 h-16 mx-auto rounded-full bg-[#00a99d] flex items-center justify-center mb-8">
               <Check className="w-8 h-8 text-white" />
             </div>
-            <h1 className="font-display text-4xl sm:text-5xl text-[#0A2540]">Your request is in.</h1>
+            <h1 className="font-display text-4xl sm:text-5xl text-[#000000]">Your request is in.</h1>
             <p className="mt-6 text-lg text-[#475569] leading-relaxed">
               Thanks, {form.name.split(" ")[0] || "there"}. I'll personally review your goal and reach out to schedule your fit-assessment call. For a faster response, join the WhatsApp community below.
             </p>
@@ -59,24 +59,24 @@ export default function BookConsultation() {
 
       <section className="pt-32 sm:pt-40 pb-24">
         <div className="container-tight max-w-2xl">
-          <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#3d97e8] mb-6">Book a Consultation</div>
-          <h1 className="font-display text-4xl sm:text-6xl leading-[1.02] text-[#0A2540]">Let's see if this is the right fit.</h1>
+          <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#00a99d] mb-6">Book a Consultation</div>
+          <h1 className="font-display text-4xl sm:text-6xl leading-[1.02] text-[#000000]">Let's see if this is the right fit.</h1>
           <p className="mt-5 text-lg text-[#475569] leading-relaxed">
             A free call to assess fit — your situation, your goal, and whether consulting is genuinely the right move for you.
           </p>
 
-          <div className="mt-8 p-4 bg-[#0A2540] text-[#F8FAFC] rounded-sm text-sm font-medium">
+          <div className="mt-8 p-4 bg-[#000000] text-[#F8FAFC] rounded-sm text-sm font-medium">
             This is a paid consulting service. Free calls are for fit assessment only.
           </div>
 
           {/* Progress bar */}
           <div className="mt-10 h-1 bg-foreground/10 overflow-hidden">
-            <div className="h-full bg-[#3d97e8] transition-all duration-500" style={{ width: `${progress}%` }} />
+            <div className="h-full bg-[#00a99d] transition-all duration-500" style={{ width: `${progress}%` }} />
           </div>
 
           <form onSubmit={submit} className="mt-8 space-y-6">
             <div>
-              <label className="block text-sm font-medium text-[#0A2540] mb-2">Name</label>
+              <label className="block text-sm font-medium text-[#000000] mb-2">Name</label>
               <input
                 type="text" required value={form.name}
                 onChange={(e) => update("name", e.target.value)}
@@ -85,7 +85,7 @@ export default function BookConsultation() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#0A2540] mb-2">Email</label>
+              <label className="block text-sm font-medium text-[#000000] mb-2">Email</label>
               <input
                 type="email" required value={form.email}
                 onChange={(e) => update("email", e.target.value)}
@@ -94,7 +94,7 @@ export default function BookConsultation() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#0A2540] mb-2">Phone / WhatsApp number</label>
+              <label className="block text-sm font-medium text-[#000000] mb-2">Phone / WhatsApp number</label>
               <input
                 type="tel" required value={form.phone}
                 onChange={(e) => update("phone", e.target.value)}
@@ -103,7 +103,7 @@ export default function BookConsultation() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#0A2540] mb-2">Which service are you interested in?</label>
+              <label className="block text-sm font-medium text-[#000000] mb-2">Which service are you interested in?</label>
               <select
                 required value={form.service_interest}
                 onChange={(e) => update("service_interest", e.target.value)}
@@ -113,7 +113,7 @@ export default function BookConsultation() {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#0A2540] mb-2">Brief description of your goal</label>
+              <label className="block text-sm font-medium text-[#000000] mb-2">Brief description of your goal</label>
               <textarea
                 required rows={5} value={form.message}
                 onChange={(e) => update("message", e.target.value)}
@@ -123,7 +123,7 @@ export default function BookConsultation() {
             </div>
 
             {status === "error" && (
-              <p className="text-sm text-[#3d97e8]">Something went wrong submitting. Please try again, or reach me on WhatsApp.</p>
+              <p className="text-sm text-[#00a99d]">Something went wrong submitting. Please try again, or reach me on WhatsApp.</p>
             )}
 
             <button type="submit" disabled={status === "loading"} className="btn-sienna w-full disabled:opacity-60">

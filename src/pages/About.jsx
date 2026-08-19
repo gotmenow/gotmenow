@@ -16,8 +16,8 @@ export default function About() {
       <section className="pt-32 sm:pt-40 pb-20">
         <div className="container-tight grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
-            <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#3d97e8] mb-6">About</div>
-            <h1 className="font-display text-5xl sm:text-7xl leading-[1.02] text-[#0A2540]">
+            <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#00a99d] mb-6">About</div>
+            <h1 className="font-display text-5xl sm:text-7xl leading-[1.02] text-[#000000]">
               I built an audience before I sold anything.
             </h1>
             <p className="mt-7 text-lg text-[#475569] leading-relaxed max-w-xl">
@@ -29,7 +29,7 @@ export default function About() {
             <Link to="/book" className="btn-sienna mt-9">Work with me <ArrowRight className="w-4 h-4" /></Link>
           </div>
           <div className="lg:col-span-5">
-            <div className="aspect-[4/5] overflow-hidden bg-[#0A2540]">
+            <div className="aspect-[4/5] overflow-hidden bg-[#000000]">
               <img src={FOUNDER_IMG} alt="Nithin, founder of GotMeNow" className="w-full h-full object-cover" />
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function About() {
               { t: "Built in public", d: "The content and community came first. The consulting is an extension of it." },
             ].map((c) => (
               <div key={c.t} className="bg-[#F8FAFC] p-8">
-                <h3 className="font-display text-2xl text-[#0A2540] mb-3">{c.t}</h3>
+                <h3 className="font-display text-2xl text-[#000000] mb-3">{c.t}</h3>
                 <p className="text-[#475569] leading-relaxed">{c.d}</p>
               </div>
             ))}
@@ -54,7 +54,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#0A2540] text-[#F8FAFC]">
+      <section className="py-20 bg-[#000000] text-[#F8FAFC]">
         <div className="container-tight">
           <SectionHeader number="02" eyebrow="Credibility" title="Where I come from." dark intro="A short list, because credibility is earned not declared." />
           <ul className="mt-12 space-y-6 max-w-2xl">
@@ -65,12 +65,12 @@ export default function About() {
               "Prioritised straight talk over reach — the community grew because the advice held up.",
             ].map((p) => (
               <li key={p} className="flex gap-4 pb-6 border-b border-white/10">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3d97e8] mt-3 flex-shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00a99d] mt-3 flex-shrink-0" />
                 <span className="text-lg text-[#F8FAFC]/85 leading-relaxed">{p}</span>
               </li>
             ))}
           </ul>
-          <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-10 text-[#3d97e8] font-medium hover:underline">
+          <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-10 text-[#00a99d] font-medium hover:underline">
             See the work at {INSTAGRAM_HANDLE} <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -82,11 +82,11 @@ export default function About() {
           <div className="mt-16 grid md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
             {TESTIMONIALS.map((t) => (
               <article key={t.name} className="bg-[#F8FAFC] p-8">
-                <p className="text-lg text-[#0A2540] leading-relaxed">"{t.quote}"</p>
+                <p className="text-lg text-[#000000] leading-relaxed">"{t.quote}"</p>
                 <div className="mt-6 pt-6 border-t border-foreground/10">
-                  <div className="font-semibold text-[#0A2540]">{t.name}</div>
+                  <div className="font-semibold text-[#000000]">{t.name}</div>
                   <div className="text-sm text-[#475569]">{t.role}</div>
-                  <div className="text-xs text-[#3d97e8] mt-1">{t.result}</div>
+                  <div className="text-xs text-[#00a99d] mt-1">{t.result}</div>
                 </div>
               </article>
             ))}

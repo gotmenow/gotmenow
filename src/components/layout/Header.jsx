@@ -31,18 +31,18 @@ export default function Header() {
           {NAV_LINKS.map((l) =>
             l.children ? (
               <div key={l.label} className="relative group">
-                <button className="flex items-center gap-1 text-sm font-medium tracking-wide text-[#475569] hover:text-[#3d97e8] transition-colors">
+                <button className="flex items-center gap-1 text-sm font-medium tracking-wide text-[#475569] hover:text-[#00a99d] transition-colors">
                   {l.label} <ChevronDown className="w-4 h-4" />
                 </button>
                 <div className="absolute left-0 top-full pt-3 hidden group-hover:block z-50">
                   <div className="w-80 bg-[#F8FAFC] border border-foreground/10 shadow-xl p-6">
                     {l.children.map((c) => (
                       <div key={c.path} className="mb-5 last:mb-0">
-                        <Link to={c.path} className="block font-display text-lg text-[#0A2540] hover:text-[#3d97e8] transition-colors">{c.label}</Link>
+                        <Link to={c.path} className="block font-display text-lg text-[#000000] hover:text-[#00a99d] transition-colors">{c.label}</Link>
                         {c.children && (
                           <div className="mt-2 ml-3 border-l border-foreground/10 pl-3 space-y-2">
                             {c.children.map((sc) => (
-                              <Link key={sc.path} to={sc.path} className="block text-sm text-[#475569] hover:text-[#3d97e8] transition-colors">{sc.label}</Link>
+                              <Link key={sc.path} to={sc.path} className="block text-sm text-[#475569] hover:text-[#00a99d] transition-colors">{sc.label}</Link>
                             ))}
                           </div>
                         )}
@@ -52,7 +52,7 @@ export default function Header() {
                 </div>
               </div>
             ) : (
-              <Link key={l.path} to={l.path} className={`text-sm font-medium tracking-wide transition-colors hover:text-[#3d97e8] ${location.pathname === l.path ? "text-[#3d97e8]" : "text-[#475569]"}`}>
+              <Link key={l.path} to={l.path} className={`text-sm font-medium tracking-wide transition-colors hover:text-[#00a99d] ${location.pathname === l.path ? "text-[#00a99d]" : "text-[#475569]"}`}>
                 {l.label}
               </Link>
             )
@@ -60,16 +60,16 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp community" className="p-2 text-[#475569] hover:text-[#0A2540] transition-colors">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp community" className="p-2 text-[#475569] hover:text-[#000000] transition-colors">
             <WhatsAppIcon className="w-5 h-5" />
           </a>
-          <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 text-[#475569] hover:text-[#0A2540] transition-colors">
+          <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 text-[#475569] hover:text-[#000000] transition-colors">
             <InstagramIcon className="w-5 h-5" />
           </a>
           <Link to="/book" className="btn-sienna text-sm">Book a Free Consultation</Link>
         </div>
 
-        <button className="lg:hidden p-2 text-[#0A2540]" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+        <button className="lg:hidden p-2 text-[#000000]" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -82,7 +82,7 @@ export default function Header() {
                 <div key={l.label} className="border-b border-foreground/5">
                   <button
                     onClick={() => setOpenSection(openSection === l.label ? null : l.label)}
-                    className="w-full flex items-center justify-between py-3 text-base font-medium text-[#0A2540]"
+                    className="w-full flex items-center justify-between py-3 text-base font-medium text-[#000000]"
                   >
                     {l.label} <ChevronDown className={`w-4 h-4 transition-transform ${openSection === l.label ? "rotate-180" : ""}`} />
                   </button>
@@ -90,7 +90,7 @@ export default function Header() {
                     <div className="pb-3">
                       {l.children.map((c) => (
                         <div key={c.path}>
-                          <Link to={c.path} className="block py-2 ml-2 text-base font-medium text-[#0A2540]">{c.label}</Link>
+                          <Link to={c.path} className="block py-2 ml-2 text-base font-medium text-[#000000]">{c.label}</Link>
                           {c.children && c.children.map((sc) => (
                             <Link key={sc.path} to={sc.path} className="block py-2 ml-6 text-sm text-[#475569]">{sc.label}</Link>
                           ))}
@@ -100,7 +100,7 @@ export default function Header() {
                   )}
                 </div>
               ) : (
-                <Link key={l.path} to={l.path} className={`py-3 text-base font-medium border-b border-foreground/5 ${location.pathname === l.path ? "text-[#3d97e8]" : "text-[#0A2540]"}`}>
+                <Link key={l.path} to={l.path} className={`py-3 text-base font-medium border-b border-foreground/5 ${location.pathname === l.path ? "text-[#00a99d]" : "text-[#000000]"}`}>
                   {l.label}
                 </Link>
               )

@@ -31,9 +31,9 @@
     --font-display: 'Instrument Serif', Georgia, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
-    --navy: #0A2540;
+    --navy: #000000;
     --white: #F8FAFC;
-    --sienna: #3d97e8;
+    --sienna: #00a99d;
     --slate: #475569;
   }
 
@@ -91,9 +91,9 @@
   .btn-sienna {
     @apply inline-flex items-center justify-center gap-2 text-white font-medium tracking-wide transition-all duration-300;
     padding: 0.875rem 1.75rem;
-    background-image: linear-gradient(135deg, #1a5ab9, #3d97e8);
+    background-image: linear-gradient(135deg, #1d3e91, #00a99d);
   }
-  .btn-sienna:hover { background-image: linear-gradient(135deg, #155a9e, #2b86cf); transform: translateY(-1px); box-shadow: 0 12px 30px -10px rgba(61,151,232,0.5); }
+  .btn-sienna:hover { background-image: linear-gradient(135deg, #154d80, #00867e); transform: translateY(-1px); box-shadow: 0 12px 30px -10px rgba(61,151,232,0.5); }
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 border border-foreground/20 text-foreground font-medium tracking-wide transition-all duration-300;
     padding: 0.875rem 1.75rem;

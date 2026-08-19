@@ -20,17 +20,17 @@ export default function ServiceOffering() {
 
       <section className="pt-32 sm:pt-40 pb-16">
         <div className="container-tight">
-          <Link to="/business-consulting" className="inline-flex items-center gap-2 text-sm text-[#475569] hover:text-[#3d97e8] transition-colors mb-8">
+          <Link to="/business-consulting" className="inline-flex items-center gap-2 text-sm text-[#475569] hover:text-[#00a99d] transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" /> Back to Business Consulting
           </Link>
-          <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#3d97e8] mb-6">What We Do · Business Consulting</div>
+          <div className="text-xs font-semibold tracking-[0.25em] uppercase text-[#00a99d] mb-6">What We Do · Business Consulting</div>
           <div className="flex items-start gap-6">
-            <div className="w-14 h-14 rounded-sm bg-[#0A2540] text-[#3d97e8] flex items-center justify-center flex-shrink-0">
+            <div className="w-14 h-14 rounded-sm bg-[#000000] text-[#00a99d] flex items-center justify-center flex-shrink-0">
               <Icon className="w-7 h-7" />
             </div>
             <div>
-              <h1 className="font-display text-4xl sm:text-6xl leading-[1.05] text-[#0A2540]">{data.title}</h1>
-              <p className="mt-4 text-lg text-[#3d97e8] font-medium">{data.tagline}</p>
+              <h1 className="font-display text-4xl sm:text-6xl leading-[1.05] text-[#000000]">{data.title}</h1>
+              <p className="mt-4 text-lg text-[#00a99d] font-medium">{data.tagline}</p>
             </div>
           </div>
           <p className="mt-8 text-lg text-[#475569] leading-relaxed max-w-3xl">{data.desc}</p>
@@ -43,8 +43,8 @@ export default function ServiceOffering() {
           <div className="mt-14 grid gap-px bg-foreground/10 sm:grid-cols-3 border border-foreground/10">
             {data.approach.map((a, i) => (
               <div key={i} className="bg-[#F8FAFC] p-8">
-                <div className="font-display text-3xl text-[#3d97e8] mb-4">{String(i + 1).padStart(2, "0")}</div>
-                <p className="text-[#0A2540] leading-relaxed">{a}</p>
+                <div className="font-display text-3xl text-[#00a99d] mb-4">{String(i + 1).padStart(2, "0")}</div>
+                <p className="text-[#000000] leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
