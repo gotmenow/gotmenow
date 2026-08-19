@@ -13,10 +13,20 @@ export default function ServiceOffering() {
   const data = SERVICES[0].offerings.find((o) => o.slug === offering);
   if (!data) return <Navigate to="/business-consulting" replace />;
   const Icon = ICONS[data.icon] || Cpu;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${data.title} — GotMeNow`,
+    serviceType: data.title,
+    description: data.desc,
+    url: `https://gotmenow.com/business-consulting/${data.slug}`,
+    areaServed: "Worldwide",
+    provider: { "@type": "Organization", name: "GotMeNow", url: "https://gotmenow.com" },
+  };
 
   return (
     <>
-      <SEO title={`GotMeNow — ${data.title}`} description={data.desc} />
+      <SEO title={`${data.title} — GotMeNow Consulting`} description={data.desc} jsonLd={jsonLd} />
 
       <section className="pt-32 sm:pt-40 pb-16">
         <div className="container-tight">

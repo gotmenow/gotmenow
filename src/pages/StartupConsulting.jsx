@@ -9,11 +9,22 @@ import { SERVICES } from "@/lib/site";
 
 const IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/220ab52b1_generated_96106598.png";
 
+const SERVICE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Startup Consulting — GotMeNow",
+  serviceType: "Startup Consulting",
+  description: SERVICES[1].short,
+  url: "https://gotmenow.com/startup-consulting",
+  areaServed: "Worldwide",
+  provider: { "@type": "Organization", name: "GotMeNow", url: "https://gotmenow.com" },
+};
+
 export default function StartupConsulting() {
   const s = SERVICES[1];
   return (
     <>
-      <SEO title="Startup Consulting — GotMeNow" description="Idea validation, launch planning, and structuring for first-time founders — including overseas accelerator and relocation routes across 9 countries." image={IMG} />
+      <SEO title="Startup Consulting — GotMeNow" description="Idea validation, launch planning, and structuring for first-time founders — including overseas accelerator and relocation routes across 9 countries." image={IMG} jsonLd={SERVICE_JSONLD} />
 
       <section className="pt-32 sm:pt-40 pb-20">
         <div className="container-tight grid lg:grid-cols-12 gap-12 items-end">

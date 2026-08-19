@@ -4,11 +4,21 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { FAQS } from "@/lib/site";
 
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function FAQ() {
   const [open, setOpen] = useState(0);
   return (
     <>
-      <SEO title="FAQ — GotMeNow Consulting" description="Common questions about how GotMeNow consulting works — scope, pricing approach, timelines, sessions, and how the WhatsApp community relates to consulting." />
+      <SEO title="FAQ — GotMeNow Consulting" description="Common questions about how GotMeNow consulting works — scope, pricing approach, timelines, sessions, and how the WhatsApp community relates to consulting." jsonLd={FAQ_JSONLD} />
 
       <section className="pt-32 sm:pt-40 pb-20">
         <div className="container-tight max-w-3xl">

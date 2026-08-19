@@ -10,11 +10,22 @@ const IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/5f8
 
 const OFFERING_ICONS = { Cpu, Megaphone, Search, Code };
 
+const SERVICE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Business Consulting — GotMeNow",
+  serviceType: "Business Consulting",
+  description: SERVICES[0].short,
+  url: "https://gotmenow.com/business-consulting",
+  areaServed: "Worldwide",
+  provider: { "@type": "Organization", name: "GotMeNow", url: "https://gotmenow.com" },
+};
+
 export default function BusinessConsulting() {
   const s = SERVICES[0];
   return (
     <>
-      <SEO title="Business Consulting — GotMeNow" description="Strategy, operations, and growth advisory for existing businesses that have stopped scaling predictably. Consulting, not guaranteed outcomes." image={IMG} />
+      <SEO title="Business Consulting — GotMeNow" description="Strategy, operations, and growth advisory for existing businesses that have stopped scaling predictably. Consulting, not guaranteed outcomes." image={IMG} jsonLd={SERVICE_JSONLD} />
 
       <section className="pt-32 sm:pt-40 pb-20">
         <div className="container-tight grid lg:grid-cols-12 gap-12 items-end">

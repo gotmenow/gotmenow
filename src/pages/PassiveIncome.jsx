@@ -8,11 +8,22 @@ import { SERVICES } from "@/lib/site";
 
 const IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/220ab52b1_generated_96106598.png";
 
+const SERVICE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Passive Income Consulting — GotMeNow",
+  serviceType: "Passive Income Consulting",
+  description: SERVICES[2].short,
+  url: "https://gotmenow.com/passive-income",
+  areaServed: "Worldwide",
+  provider: { "@type": "Organization", name: "GotMeNow", url: "https://gotmenow.com" },
+};
+
 export default function PassiveIncome() {
   const s = SERVICES[2];
   return (
     <>
-      <SEO title="Passive Income Consulting — GotMeNow" description="Strategy and systems for building income streams — skills-based, content-based, and asset-based. Strategy-first education, not guaranteed returns." image={IMG} />
+      <SEO title="Passive Income Consulting — GotMeNow" description="Strategy and systems for building income streams — skills-based, content-based, and asset-based. Strategy-first education, not guaranteed returns." image={IMG} jsonLd={SERVICE_JSONLD} />
 
       <section className="pt-32 sm:pt-40 pb-20">
         <div className="container-tight grid lg:grid-cols-12 gap-12 items-end">
