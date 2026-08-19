@@ -3,7 +3,7 @@ const LOGO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf6
 export default function Logo({ className = "", height = 62 }) {
   return (
     <span
-      className={`inline-flex items-center rounded-full px-3.5 bg-[hsl(var(--background))] text-6xl ${className}`}
+      className={`inline-flex items-center rounded-full bg-[hsl(var(--background))] text-9xl px-5.5 ${className}`}
       style={{ height }}>
       
       <img
