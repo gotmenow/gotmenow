@@ -1,4 +1,4 @@
-const LOGO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/cb583d962_Untitleddesign1.png";
+const LOGO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/a0224ba3f_NewLogo.png";
 
 export default function Logo({ className = "", height = 52 }) {
   return (
