@@ -1,17 +1,25 @@
-const LOGO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/a0224ba3f_NewLogo.png";
+const LOGO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/3aa1f6197_Logoa.png";
+const FILTER_ID = "gmn-remove-black";
 
-export default function Logo({ className = "", height = 52 }) {
+export default function Logo({ className = "", height = 44 }) {
   return (
-    <div
-      className={`inline-flex items-center rounded-full bg-black px-3.5 ${className}`}
-      style={{ height, filter: "brightness(1.18) saturate(1.22)" }}
-    >
+    <span className={`inline-flex items-center ${className}`}>
+      <svg width="0" height="0" aria-hidden="true" style={{ position: "absolute" }}>
+        <defs>
+          <filter id={FILTER_ID}>
+            <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 1 1 0 -0.12" />
+            <feComponentTransfer>
+              <feFuncA type="table" tableValues="0 1 1 1 1" />
+            </feComponentTransfer>
+          </filter>
+        </defs>
+      </svg>
       <img
         src={LOGO_IMG}
         alt="GotMeNow"
-        style={{ height: Math.round(height * 0.64), width: "auto" }}
+        style={{ height, width: "auto", filter: `url(#${FILTER_ID})` }}
         className="select-none"
       />
-    </div>
+    </span>
   );
 }
