@@ -1,12 +1,15 @@
-const LOGO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/dc3913732_image.png";
+const LOGO_IMG = "https://media.base44.com/images/public/6a7c1eb392acd3acb78eaf63/a0224ba3f_NewLogo.png";
 
-export default function Logo({ className = "", height = 44 }) {
+export default function Logo({ className = "", height = 62 }) {
   return (
-    <span className={`inline-flex items-center ${className}`}>
+    <span
+      className={`inline-flex items-center rounded-full bg-black px-3.5 ${className}`}
+      style={{ height }}
+    >
       <img
         src={LOGO_IMG}
         alt="GotMeNow"
-        style={{ height, width: "auto" }}
+        style={{ height: Math.round(height * 0.64), width: "auto" }}
         className="select-none"
       />
     </span>

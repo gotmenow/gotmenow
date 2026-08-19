@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container-tight py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Logo height={68} className="mb-4" />
+            <Logo height={88} className="mb-4" />
             <p className="text-sm leading-relaxed text-[#F8FAFC]/70 max-w-sm">
               Straight-talk consulting for people building a business, a startup, or a second income — without the noise.
             </p>
